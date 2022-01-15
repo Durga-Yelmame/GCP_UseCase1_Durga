@@ -22,7 +22,7 @@ public class UseCase1_PubSub_to_BigQuery {
 
 
     /*
-    Additional requirements 1. -> Pub/Sub topic name, Table name, topic subscription and DLQ topic are parametric.
+    Pub/Sub topic name, Table name, topic subscription and DLQ topic are parametric.
     */
     public interface PipelineOptions extends DataflowPipelineOptions {
         @Description("Input topic name")
@@ -64,10 +64,10 @@ public class UseCase1_PubSub_to_BigQuery {
         }
     }
     /*
-    1. Pieplinw will Read Data from PubSub Subscription.
+    1. Piepline will Read Data from PubSub Subscription.
     2. Transform Data
     3. Extract Valid Data and Invalid Data.
-    4. Valid Data will be writen in BigQuery Table
+    4. Valid Data will be written in BigQuery Table
     5. Invalid Data will be send to DLQ Topic
     */
     public static PipelineResult run(PipelineOptions options) {
